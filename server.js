@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 //enable all client access + all methods (post, put,....)
 app.use(cors({
-    origin: 'https://vocab-client-blond.vercel.app/',
+    origin: 'https://vocab-client-blond.vercel.app',
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }))
 
