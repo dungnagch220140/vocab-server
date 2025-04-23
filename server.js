@@ -4,7 +4,7 @@ const app = express()
 const cors = require('cors')
 //enable all client access + all methods (post, put,....)
 app.use(cors({
-    origin: 'https://vocab-client-blond.vercel.app',
+    origin: 'https://vocab-client-blond.vercel.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }))
 
@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true}))
 app.use(express.json())
 
 const mongoose = require ('mongoose')
-const db = "mongodb://localhost:27017/vocab-builder"
+const db = "mongodb+srv://dungnagch220140:dung123@cluster0.id5zqpu.mongodb.net/vocab?retryWrites=true&w=majority"
 mongoose.connect(db)
     .then(() => console.log('success'))
 .catch((err) => console.error('failure: ' + err))
