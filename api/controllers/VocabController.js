@@ -50,15 +50,6 @@ const deleteVocab = async (req, res) =>{
         }
 }
 
-const deleteAll = async () => {
-    try {
-        await vocabModel.deleteMany()
-        res.json({message: "Delete succeed!"})
-    } catch (err) {
-        res.send(err)
-    }
-}
-
 
 module.exports ={
     viewAllVocabs,
@@ -66,5 +57,4 @@ module.exports ={
     addNewVocab,
     editVocab,
     deleteVocab,
-    deleteAll,
 }

@@ -6,8 +6,7 @@ const vocabRoute = (app) => {
     app.route('/vocab')
         .get(vocabController.viewAllVocabs)
         .post(vocabController.addNewVocab)
-        .delete(vocabController.deleteAll)
-    
+        
     //endpoint with id
     app.route('/vocab/:id')
         .get(vocabController.viewVocabById)
